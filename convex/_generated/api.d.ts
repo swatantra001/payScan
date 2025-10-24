@@ -13,8 +13,6 @@ import type {
   FilterApi,
   FunctionReference,
 } from "convex/server";
-import type * as gemini from "../gemini.js";
-import type * as http from "../http.js";
 import type * as transactions from "../transactions.js";
 
 /**
@@ -26,8 +24,6 @@ import type * as transactions from "../transactions.js";
  * ```
  */
 declare const fullApi: ApiFromModules<{
-  gemini: typeof gemini;
-  http: typeof http;
   transactions: typeof transactions;
 }>;
 export declare const api: FilterApi<
