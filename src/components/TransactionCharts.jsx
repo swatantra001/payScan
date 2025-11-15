@@ -129,9 +129,9 @@ const TransactionCharts = ({ transactions = [] }) => {
 
 
 	return (
-		<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 !p-2 !mb-8 bg-[#1a1a1d]">
+		<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 !p-2 !mb-8 bg-[#08080a]">
 			{/* Type Pie Chart */}
-            <Card className="bg-neutral-800 border-neutral-700 text-white">
+            <Card className="bg-[#01010e] border-neutral-700 text-white">
                 <CardHeader>
                     <CardTitle className="!p-2 text-pink-500 text-center">Credit vs Debit</CardTitle>
                 </CardHeader>
@@ -162,7 +162,7 @@ const TransactionCharts = ({ transactions = [] }) => {
             </Card>
 
             {/* Method Pie Chart */}
-            <Card className="bg-neutral-800 border-neutral-700 text-white">
+            <Card className="bg-[#01010e] border-neutral-700 text-white">
                 <CardHeader>
                     <CardTitle className="!p-2 text-pink-500 text-center">Amount by Method</CardTitle>
                 </CardHeader>
@@ -193,7 +193,7 @@ const TransactionCharts = ({ transactions = [] }) => {
             </Card>
 
 			{/* Weekly Bar Chart */}
-			<Card className="bg-neutral-800 border-neutral-700 text-white md:col-span-2 lg:col-span-1">
+			<Card className="bg-[#01010e] border-neutral-700 text-white md:col-span-2 lg:col-span-1">
 				<CardHeader>
 					<CardTitle className="!p-2 text-pink-500 text-center">Last 7 Days Activity</CardTitle>
 				</CardHeader>

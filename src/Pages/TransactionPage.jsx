@@ -53,7 +53,7 @@ const TransactionsPage = () => {
 
 	if (!isLoaded) {
 		return (
-			<div className="flex !h-[100vh] !w-[100vw] bg-[#1a1a1d] justify-center items-center">
+			<div className="flex !h-[100vh] !w-[100vw] bg-[#0e0e11] justify-center items-center">
 				<Loader2Icon size={24} className='text-white animate-spin' />
 				<p className="text-white text-xl">Transaction loading...</p>
 			</div>
@@ -329,19 +329,19 @@ const TransactionsPage = () => {
 	
 	return (
 		<LocalizationProvider dateAdapter={AdapterDayjs}>
-			<div className={`min-h-screen w-[100%]  bg-neutral-900 text-white p-8 font-sans`}>
-				<header className="w-full mb-3 sticky top-0 z-30 bg-[#1a1a1d]  shadow-xs shadow-[#ff0066] !p-2">
+			<div className={`min-h-screen w-[100%] bg-[#0e0e11] text-white p-8 font-sans`}>
+				<header className="w-full mb-3 sticky top-0 z-30 bg-[#0e0e11]  shadow-lg shadow-[#01010e] !p-2">
 					<div className="flex justify-around md:justify-between items-center !px-2">
 						<h1 className="text-3xl md:text-4xl font-extrabold">PayScan</h1>
 						<div className='flex items-center gap-3 !px-5'>
 							<Popover open={isPopoverOpen} onOpenChange={setIsPopoverOpen}>
 								<PopoverTrigger asChild>
-									<Button variant="outline" className="gap-1 !p-2 md:!p-3 !py-3 md:!py-6 px-6 cursor-pointer bg-neutral-800 border-neutral-600 hover:bg-neutral-700 hover:text-[#ff0066] transition-colors">
+									<Button variant="outline" className="gap-1 !p-2 md:!p-3 !py-3 md:!py-6 px-6 cursor-pointer bg-[#01010e] border-neutral-600 hover:bg-[#131317] hover:text-[#ff0066] transition-colors">
 										<Filter className='hidden md:inline' size={14} />
 										Filters
 									</Button>
 								</PopoverTrigger>
-								<PopoverContent sideOffset={18} className="w-auto p-0 bg-[#1e1e22] border-neutral-700 text-white" align="end">
+								<PopoverContent sideOffset={18} className="w-auto p-0 bg-[#01010e] border-neutral-700 text-white" align="end">
 									<FilterPopover
 										initialFilters={filters}
 										setFilters={setFilters}
@@ -377,9 +377,9 @@ const TransactionsPage = () => {
 												height: "3rem",
 											},
 											userButtonPopoverCard: {
-												backgroundColor: "#2a2a2e",
+												backgroundColor: "#01010e",
 												borderRadius: "0.5rem",
-												boxShadow: "0 4px 10px rgba(0, 0, 0, 0.5)",
+												boxShadow: "0 4px 10px rgba(0, 0, 0, 0.45)",
 												border: "1px solid rgba(255, 255, 255, 0.1)"
 											},
 											userButtonPopoverItem: {
@@ -414,10 +414,10 @@ const TransactionsPage = () => {
 					</div>
 
 				</header>
-				<main className={`max-w-7xl ${(isConfirmOpen || isModalOpen || isCameraOpen || isPopoverOpen || isAlertOpen || isDuplicateAlertOpen) ? "blur-xs" : ""} mx-auto p-4 md:p-8`}>
+				<main className={`max-w-7xl ${(isConfirmOpen || isModalOpen || isCameraOpen || isPopoverOpen || isAlertOpen || isDuplicateAlertOpen) ? "blur-md" : ""} mx-auto p-4 md:p-8`}>
 
 					{/* --- ADD THIS SEARCH BAR --- */}
-					<div className="bg-[#1e1e22] flex justify-center gap-2 !p-6">
+					<div className="bg-[#0e0e11] flex justify-center gap-2 !p-6">
 						<div className="relative max-w-sm md:min-w-lg md:max-w-xl">
 							<Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
 							<Input
@@ -425,14 +425,14 @@ const TransactionsPage = () => {
 								placeholder="Search by Transaction ID..."
 								value={searchTerm}
 								onChange={(e) => setSearchTerm(e.target.value)}
-								className="w-full !pl-10 !pr-4 !py-2 bg-neutral-800 border-neutral-700 text-white rounded-lg focus:!ring-1 focus:ring-pink-500"
+								className="w-full !pl-10 !pr-4 !py-2 bg-[#01010e] border-neutral-700 text-white rounded-lg focus:!ring-1 focus:ring-pink-500"
 							/>
 						</div>
 						{/* --- ADD DESKTOP DOWNLOAD BUTTON --- */}
 						<Button
 							onClick={handleGeneratePdf}
 							variant="outline"
-							className="gap-1 !p-2 md:!p-4 !py-3 px-4 md:px-6 cursor-pointer bg-neutral-800 border-neutral-600 hover:bg-neutral-700 hover:text-[#ff0066] transition-colors"
+							className="gap-1 !p-2 md:!p-4 !py-3 px-4 md:px-6 cursor-pointer bg-[#01010e] border-neutral-600 hover:bg-[#131317] hover:text-[#ff0066] transition-colors"
 						>
 							<Download size={14} />
 							<span className="hidden md:inline">Download PDF</span>
@@ -448,11 +448,11 @@ const TransactionsPage = () => {
 					</AnimatePresence>
 				</main>
 
-				<div className={`overflow-y-scroll ${(isConfirmOpen || isModalOpen || isCameraOpen || isPopoverOpen || isAlertOpen || isDuplicateAlertOpen) ? "blur-xs" : ""} w-[100%]`}>
+				<div className={`overflow-y-scroll ${(isConfirmOpen || isModalOpen || isCameraOpen || isPopoverOpen || isAlertOpen || isDuplicateAlertOpen) ? "blur-md" : ""} w-[100%]`}>
 					<TableComponent transactions={filteredTransactions} onEdit={handleEdit} onDelete={handleDelete} />
 				</div>
 				{filteredTransactions.length > 0 &&
-				<div className={`${(isConfirmOpen || isModalOpen || isCameraOpen || isPopoverOpen || isAlertOpen || isDuplicateAlertOpen) ? "blur-xs" : ""}`}>
+				<div className={`${(isConfirmOpen || isModalOpen || isCameraOpen || isPopoverOpen || isAlertOpen || isDuplicateAlertOpen) ? "blur-md" : ""}`}>
 					<TransactionCharts transactions={filteredTransactions} />
 				</div>
 				}

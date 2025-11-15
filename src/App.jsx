@@ -15,7 +15,7 @@ const darkTheme = createTheme({
 			main: '#ff0066', // Your pink accent color
 		},
 		background: {
-			paper: '#1e1e22', // The background color for the calendar popup
+			paper: '#01010e', // The background color for the calendar popup
 		},
 		text: {
 			primary: '#ffffff',
@@ -29,11 +29,11 @@ function App() {
 	return (
 		<>
 			<ThemeProvider theme={darkTheme}>
-				<main className='h-[100vh] w-[100vw] bg-[#1a1a1d]'>
+				<main className='h-[100vh] w-[100vw] bg-[#0e0e11]'>
 					<Toaster />
 					<SignedOut>
 						{/* Display the sign-in form when the user is signed out */}
-						<div className="flex justify-center items-center h-[100vh]">
+						<div className="flex bg-black justify-center items-center h-[100vh]">
 							<SignIn />
 						</div>
 					</SignedOut>

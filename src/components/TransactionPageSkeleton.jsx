@@ -12,12 +12,12 @@ const ChartSkeleton = () => (
 
 // A skeleton for your table and summary cards
 const TableSkeleton = () => (
-  <div className="w-full flex flex-col h-[calc(80vh)] bg-[#1a1a1d] rounded-lg mt-6">
+  <div className="w-full flex flex-col h-[calc(80vh)] bg-[#08080a] rounded-lg mt-6">
     {/* Table Skeleton */}
     <div className="flex-grow overflow-auto">
       <div className="w-full text-left border-collapse">
         {/* Skeleton Header */}
-        <div className="bg-neutral-800 sticky top-0 z-10 flex p-3 justify-between space-x-4">
+        <div className="bg-[#01010e] sticky top-0 z-10 flex p-3 justify-between space-x-4">
           {Array.from({ length: 10 }).map((_, i) => (
             <Skeleton key={i} className="h-5 flex-1 bg-neutral-700" />
           ))}
@@ -25,7 +25,7 @@ const TableSkeleton = () => (
         {/* Skeleton Rows */}
         <div className="p-3 space-y-3">
           {Array.from({ length: 7 }).map((_, i) => (
-            <Skeleton key={i} className="h-10 w-full bg-neutral-800" />
+            <Skeleton key={i} className={`border-b border-neutral-700 ${i & 1 ? 'bg-[#050505]' : 'bg-[#0e0e11]'}`} />
           ))}
         </div>
       </div>
@@ -45,7 +45,7 @@ const TransactionPageSkeleton = () => {
   return (
     <div className="min-h-screen min-w-screen !pt-3 bg-neutral-900 text-white p-4 md:p-8 font-sans">
       {/* Header Skeleton (matches your real header) */}
-      <header className="w-full mb-3 sticky top-0 z-30 bg-[#1a1a1d] shadow-md !p-2">
+      <header className="w-full mb-3 sticky top-0 z-30 bg-[#0e0e11] shadow-md !p-2">
         <div className="flex justify-between items-center !px-2">
           <h1 className="text-3xl md:text-4xl font-extrabold">PayScan</h1>
           <div className='flex items-center gap-3 !px-5'>

@@ -11,7 +11,7 @@ const muiInputStyles = {
 	width: '90% !important', // Make the input take full width
 	// Target the input field's container
 	'& .MuiInputBase-root': {
-		backgroundColor: '#2a2a2e', // Match your other inputs' background
+		backgroundColor: '#01010e', // Match your other inputs' background
 		borderRadius: '8px', // Match your other inputs' border radius
 		'& fieldset': {
 			border: 'none', // Remove the default border
@@ -188,14 +188,14 @@ const FilterPopover = ({ initialFilters, setFilters, onApplyFilters }) => {
 						type="number"
 						value={amountRange[0]}
 						onChange={(e) => handleInputChange(0, e.target.value)}
-						className="!px-2 h-8 bg-neutral-700 border-none text-white focus:ring-[#ff0066]"
+						className="!px-2 h-8 bg-[#0f0f15] border-none text-white focus:ring-[#ff0066]"
 						placeholder="Min"
 					/>
 					<Input
 						type="number"
 						value={amountRange[1]}
 						onChange={(e) => handleInputChange(1, e.target.value)}
-						className="!px-2 h-8 bg-neutral-700 border-none text-white focus:ring-[#ff0066]"
+						className="!px-2 h-8 bg-[#0f0f15] border-none text-white focus:ring-[#ff0066]"
 						placeholder="Max"
 					/>
 				</div>
@@ -214,7 +214,7 @@ const FilterPopover = ({ initialFilters, setFilters, onApplyFilters }) => {
 							className={`rounded-full !p-2 h-7 text-xs cursor-pointer border-neutral-600 hover:bg-neutral-700 hover:text-white transition-colors
                                 ${selectedMethods.includes(method)
 									? 'bg-[#ff0066] text-white border-pink-600 hover:bg-[#e6005c]'
-									: 'bg-neutral-800 text-gray-300'
+									: 'bg-[#0f0f15] text-gray-300'
 								}
                             `}
 						>
@@ -236,7 +236,7 @@ const FilterPopover = ({ initialFilters, setFilters, onApplyFilters }) => {
 							className={`rounded-full !p-2 h-7 text-xs cursor-pointer border-neutral-600 hover:bg-neutral-700 hover:text-white transition-colors
                                 ${selectedTypes.includes(type)
 									? 'bg-[#ff0066] text-white border-pink-600 hover:bg-[#e6005c]'
-									: 'bg-neutral-800 text-gray-300'
+									: 'bg-[#0f0f15] text-gray-300'
 								}
                             `}
 						>
@@ -248,7 +248,7 @@ const FilterPopover = ({ initialFilters, setFilters, onApplyFilters }) => {
 
 			{/* Action Buttons */}
 			<div className="flex justify-end gap-2 !pt-3  border-t border-neutral-700">
-				<Button variant="outline" size="sm" onClick={clearFilters} className="!p-2 cursor-pointer bg-neutral-800 text-white hover:text-[#ff0066] hover:bg-neutral-700">Clear</Button>
+				<Button variant="outline" size="sm" onClick={clearFilters} className="!p-2 cursor-pointer bg-[#0e0e11] text-white hover:text-[#ff0066] hover:bg-[#131317]">Clear</Button>
 				<Button size="sm" onClick={applyFilters} className="!p-2 cursor-pointer bg-[#ff0066] hover:bg-[#e6005c] text-white">Apply</Button>
 			</div>
 		</div>

@@ -225,7 +225,7 @@ export default function ModernForm({ transactions, onClose }) {
 	return (
 		<LocalizationProvider dateAdapter={AdapterDayjs}>
 			<motion.div>
-				<div ref={ref} className={`min-h-screen w-[100%] bg-[#1a1a1d] !py-6 flex flex-col gap-4 md:flex-row items-center justify-center p-6 font-sans`}>
+				<div ref={ref} className={`min-h-screen w-[100%] bg-[#0e0e11] !py-6 flex flex-col gap-4 md:flex-row items-center justify-center p-6 font-sans`}>
 					{/* Left Section */}
 
 					<motion.div
@@ -233,7 +233,8 @@ export default function ModernForm({ transactions, onClose }) {
 						animate={{ opacity: 1, y: 0, height: 'auto' }}
 						exit={{ opacity: 0, y: -20, height: 0 }} // 3. Define the exit animation
 						transition={{ duration: 0.3 }}
-						className="bg-[#1e1e22] rounded-3xl shadow-[0_0_10px_rgba(233,30,99,0.4)] py-8 md:w-[25%] w-[90%] max-w-md text-white"
+						className="bg-[#01010e] rounded-3xl shadow-[0_0_20px_rgba(0,0,0,0.45)]
+ py-8 md:w-[25%] w-[90%] max-w-md text-white"
 					>
 						<div className='!m-4'>
 							<h2 className="text-[#ff0066] text-3xl font-bold text-center mb-2">Required*</h2>
@@ -246,7 +247,7 @@ export default function ModernForm({ transactions, onClose }) {
 									<div className="relative w-[90%] !mb-3">
 										<IndianRupee size={18} className="text-gray-400 absolute left-2 top-1/2 -translate-y-1/2" />
 
-										<input type="text" name="amount" onChange={handleChange} value={formState.amount} placeholder="Amount *" className="form-input w-full bg-[#2a2a2e] rounded-lg border-none !pl-8 !pr-4 !py-1 text-gray-200 focus:ring-2 focus:ring-[#ff0066]" required />
+										<input type="text" name="amount" onChange={handleChange} value={formState.amount} placeholder="Amount *" className="form-input w-full bg-[#0f0f15] rounded-lg border-none !pl-8 !pr-4 !py-1 text-gray-200 focus:ring-2 focus:ring-[#ff0066]" required />
 									</div>
 								</TooltipTrigger>
 								<TooltipContent className="bg-black text-white rounded !p-1 text-xs">
@@ -265,7 +266,7 @@ export default function ModernForm({ transactions, onClose }) {
 											value="credit"
 											checked={formState.type === 'credit'}
 											onChange={handleChange}
-											className="form-radio bg-neutral-700 border-neutral-600 text-[#ff0066] focus:ring-[#ff0066]"
+											className="form-radio bg-[#0f0f15] border-neutral-600 text-[#ff0066] focus:ring-[#ff0066]"
 										/>
 										<span>Credit</span>
 									</label>
@@ -276,7 +277,7 @@ export default function ModernForm({ transactions, onClose }) {
 											value="debit"
 											checked={formState.type === 'debit'}
 											onChange={handleChange}
-											className="form-radio bg-neutral-700 border-neutral-600 text-[#ff0066] focus:ring-[#ff0066]"
+											className="form-radio bg-[#0f0f15] border-neutral-600 text-[#ff0066] focus:ring-[#ff0066]"
 										/>
 										<span>Debit</span>
 									</label>
@@ -288,7 +289,7 @@ export default function ModernForm({ transactions, onClose }) {
 								<TooltipTrigger asChild>
 									<div className="relative w-[90%] !mb-3">
 										<IdCard size={18} className="text-gray-400 absolute left-2 top-1/2 -translate-y-1/2" />
-										<input type="text" name="transactionId" onChange={handleChange} value={formState.transactionId} placeholder="Transaction id" className="form-input w-full bg-[#2a2a2e] rounded-lg border-none !pl-8 !pr-4 !py-1 text-gray-200 focus:ring-2 focus:ring-[#ff0066]" />
+										<input type="text" name="transactionId" onChange={handleChange} value={formState.transactionId} placeholder="Transaction id" className="form-input w-full bg-[#0f0f15] rounded-lg border-none !pl-8 !pr-4 !py-1 text-gray-200 focus:ring-2 focus:ring-[#ff0066]" />
 									</div>
 								</TooltipTrigger>
 								<TooltipContent className="bg-black text-white rounded !p-1 text-xs">
@@ -301,7 +302,7 @@ export default function ModernForm({ transactions, onClose }) {
 								<TooltipTrigger asChild>
 									<div className="relative w-[90%] !mb-3">
 										<User2Icon size={18} className="text-gray-400 absolute left-2 top-1/2 -translate-y-1/2" />
-										<input type="text" name="senderName" onChange={handleChange} value={formState.senderName} placeholder="Sender name" className="form-input w-full bg-[#2a2a2e] rounded-lg border-none !pl-10 !pr-4 !py-1 text-gray-200 focus:ring-2 focus:ring-[#ff0066]" />
+										<input type="text" name="senderName" onChange={handleChange} value={formState.senderName} placeholder="Sender name" className="form-input w-full bg-[#0f0f15] rounded-lg border-none !pl-10 !pr-4 !py-1 text-gray-200 focus:ring-2 focus:ring-[#ff0066]" />
 									</div>
 								</TooltipTrigger>
 								<TooltipContent className="bg-black text-white rounded !p-1 text-xs">
@@ -314,7 +315,7 @@ export default function ModernForm({ transactions, onClose }) {
 								<TooltipTrigger asChild>
 									<div className="relative w-[90%] !mb-3">
 										<User2Icon size={18} className="text-gray-400 absolute left-2 top-1/2 -translate-y-1/2" />
-										<input type="text" name="receiverName" onChange={handleChange} value={formState.receiverName} placeholder="Receiver name" className="form-input w-full bg-[#2a2a2e] rounded-lg border-none !pl-10 !pr-4 !py-1 text-gray-200 focus:ring-2 focus:ring-[#ff0066]" />
+										<input type="text" name="receiverName" onChange={handleChange} value={formState.receiverName} placeholder="Receiver name" className="form-input w-full bg-[#0f0f15] rounded-lg border-none !pl-10 !pr-4 !py-1 text-gray-200 focus:ring-2 focus:ring-[#ff0066]" />
 									</div>
 								</TooltipTrigger>
 								<TooltipContent className="bg-black text-white rounded !p-1 text-xs">
@@ -328,7 +329,7 @@ export default function ModernForm({ transactions, onClose }) {
 
 									<div className="relative w-[90%] !mb-3">
 										<Hash size={18} className="text-gray-400 absolute left-2 top-1/2 -translate-y-1/2" />
-										<input type="text" name="senderId" onChange={handleChange} value={formState.senderId} placeholder="Sender id" className="form-input w-full bg-[#2a2a2e] rounded-lg border-none !pl-10 !pr-4 !py-1 text-gray-200 focus:ring-2 focus:ring-[#ff0066]" />
+										<input type="text" name="senderId" onChange={handleChange} value={formState.senderId} placeholder="Sender id" className="form-input w-full bg-[#0f0f15] rounded-lg border-none !pl-10 !pr-4 !py-1 text-gray-200 focus:ring-2 focus:ring-[#ff0066]" />
 									</div>
 								</TooltipTrigger>
 								<TooltipContent className="bg-black text-white rounded !p-1 text-xs">
@@ -341,7 +342,7 @@ export default function ModernForm({ transactions, onClose }) {
 								<TooltipTrigger asChild>
 									<div className="relative w-[90%] !mb-3">
 										<Hash size={18} className="text-gray-400 absolute left-2 top-1/2 -translate-y-1/2" />
-										<input type="text" name="receiverId" onChange={handleChange} value={formState.receiverId} placeholder="Receiver id" className="form-input w-full bg-[#2a2a2e] rounded-lg border-none !pl-10 !pr-4 !py-1 text-gray-200 focus:ring-2 focus:ring-[#ff0066]" />
+										<input type="text" name="receiverId" onChange={handleChange} value={formState.receiverId} placeholder="Receiver id" className="form-input w-full bg-[#0f0f15] rounded-lg border-none !pl-10 !pr-4 !py-1 text-gray-200 focus:ring-2 focus:ring-[#ff0066]" />
 									</div>
 								</TooltipTrigger>
 								<TooltipContent className="bg-black text-white rounded !p-1 text-xs">
@@ -354,7 +355,7 @@ export default function ModernForm({ transactions, onClose }) {
 								<TooltipTrigger asChild>
 									<div className="relative w-[90%] !mb-1">
 										<LucideBanknote size={18} className="text-gray-400 absolute left-2 top-1/2 -translate-y-1/2" />
-										<select name="method" onChange={handleChange} value={formState.method} className="form-select w-full bg-[#2a2a2e] rounded-lg border-none !pl-10 !pr-4 !py-1 text-gray-200 focus:ring-2 focus:ring-[#ff0066]">
+										<select name="method" onChange={handleChange} value={formState.method} className="form-select w-full bg-[#0f0f15] rounded-lg border-none !pl-10 !pr-4 !py-1 text-gray-200 focus:ring-2 focus:ring-[#ff0066]">
 											<option value="" disabled>Method *</option>
 											<option value="phonepay">Phone pay</option>
 											<option value="googlepay">Google pay</option>
@@ -383,7 +384,7 @@ export default function ModernForm({ transactions, onClose }) {
 						animate={{ opacity: 1, y: 0, height: 'auto' }}
 						exit={{ opacity: 0, y: -20, height: 0 }} // 3. Define the exit animation
 						transition={{ duration: 0.3 }}
-						className="bg-[#1e1e22] rounded-3xl shadow-[0_0_10px_rgba(233,30,99,0.4)] p-8 md:w-[25%] w-[90%] max-w-md text-white"
+						className="bg-[#01010e] rounded-3xl shadow-[0_0_20px_rgba(0,0,0,0.45)] p-8 md:w-[25%] w-[90%] max-w-md text-white"
 					>
 						<div className='!m-6'>
 							<h2 className="text-[#ff0066] text-3xl font-bold text-center mb-2">FORM</h2>
@@ -420,7 +421,7 @@ export default function ModernForm({ transactions, onClose }) {
 				{isDuplicateAlertOpen && (
 					<AlertDialog open={isDuplicateAlertOpen} onOpenChange={setIsDuplicateAlertOpen}>
 						<AnimatePresence>
-							<AlertDialogContent className="bg-neutral-800 !p-2 border-neutral-700 text-white shadow-[0_0_20px_rgba(220,38,38,0.5)]">
+							<AlertDialogContent className="bg-[#01010e] !p-2 border-neutral-700 text-white shadow-[0_0_20px_rgba(0,0,0,0.45)]">
 								<AlertDialogHeader>
 									<AlertDialogTitle className="flex items-center gap-2 text-red-500 font-bold text-2xl">!! WARNING !!</AlertDialogTitle>
 									{/* <AlertDialogDescription className="text-gray-400">

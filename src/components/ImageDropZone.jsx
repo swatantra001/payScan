@@ -346,7 +346,7 @@ const ImageDropzone = ({ isFormVisible }) => {
             {/* --- NEW CAMERA DIALOG --- */}
             <Dialog open={isCameraOpen} onOpenChange={closeCamera}>
                 <DialogContent
-                    className="bg-[#1e1e22] border-neutral-700 text-white p-6 rounded-2xl shadow-[0_0_10px_rgba(233,30,99,0.5)] max-w-lg w-[90vw]"
+                    className="bg-[#01010e] border-neutral-700 text-white p-6 rounded-2xl shadow-[0_0_20px_rgba(0,0,0,0.45)] max-w-lg w-[90vw]"
                 >
                     <DialogHeader>
                         <DialogTitle className="text-2xl font-bold text-[#ff0066] text-center">

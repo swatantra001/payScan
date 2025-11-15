@@ -226,10 +226,10 @@ const TableComponent = ({ transactions, onEdit, onDelete }) => {
 	};
 
 	return (
-		<div className={`w-[100%] !h-auto relative !m-auto !px-2 overflow-x-auto rounded-lg bg-[#1a1a1d`}>
+		<div className={`w-[100%] !h-auto relative !m-auto !px-2 overflow-x-auto rounded-lg bg-[#08080a]`}>
 			<div className={`w-100% max-h-[400px]  overflow-y-auto shadow-xs shadow-[#ff0066]`}>
 				<table className="w-full text-left border-collapse">
-					<thead className="bg-neutral-800 !z-1 sticky top-0">
+					<thead className="bg-[#01010e] !z-1 sticky top-0">
 						<tr>
 							<th ref={scrollRefStart}
 								className="min-w-[20px] bg-neutral-800 text-[#ff0066] p-3 font-semibold text-sm cursor-pointer hover:bg-neutral-700 transition-colors"
@@ -282,7 +282,7 @@ const TableComponent = ({ transactions, onEdit, onDelete }) => {
 					<tbody>
 						{sortedData
 							.map((item, index) => (
-								<tr key={index} id={item._id} onClick={() => handleRowClick(item)} className="border-b border-neutral-700 hover:bg-neutral-800 transition-colors">
+								<tr key={index} id={item._id} onClick={() => handleRowClick(item)} className={`border-b border-neutral-700 ${index & 1 ? 'bg-[#050505]' : 'bg-[#0e0e11]'} hover:bg-neutral-800 transition-colors`}>
 									<td className="p-3 text-gray-200">{item.id}</td>
 									<td className="!p-3 text-gray-200"><Button type="ghost" className="bg-green-900/50 !max-h-8 md:!max-h-6 !p-1">{item.amount}</Button></td>
 									<td className="!p-3 text-gray-200">{item.method}</td>
@@ -295,7 +295,7 @@ const TableComponent = ({ transactions, onEdit, onDelete }) => {
 									<td className="p-3 text-gray-200 text-xs">{item.receiverId}</td>
 									<td className="p-3 text-gray-200">
 										<div
-											className="!p-2 md:!p-1 bg-[#1a1d1b] hover:bg-neutral-800 flex justify-center !py-2 !m-0 rounded-md cursor-pointer"
+											className="!p-2 md:!p-1 bg-[#01010e] hover:bg-neutral-800 flex justify-center !py-2 !m-0 rounded-md cursor-pointer"
 											onClick={(e) => toggleSwitch(e, item._id)}
 										>
 											<Switch
@@ -334,10 +334,10 @@ const TableComponent = ({ transactions, onEdit, onDelete }) => {
 			{<div className="!p-2 !pt-10">
 				{/* --- Selection and Deletion --- */}
 				{transactions.length > 0 &&
-					<div className="max-w-4xl flex-1 !mx-auto bg-neutral-800 !p-1 rounded-xl ring-1 ring-white/10 flex items-center justify-between gap-6">
+					<div className="max-w-4xl flex-1 !mx-auto bg-[#01010e] !p-1 rounded-xl ring-1 ring-white/10 flex items-center justify-between gap-6">
 						<div
 							onClick={handleSelectAllClick}
-							className="flex items-center gap-3 bg-neutral-800 !p-1 md:!p-2 font-bold text-md cursor-pointer rounded-md"
+							className="flex items-center gap-3 bg-[#0e0e11] !p-1 md:!p-2 font-bold text-md cursor-pointer rounded-md"
 						>
 							<Switch checked={selectAll} className="bg-gray-700 data-[state=checked]:bg-gradient-to-r data-[state=checked]:from-pink-500 data-[state=unchecked]:bg-neutral-700 data-[state=checked]:to-purple-500 transition-colors duration-300" />
 							Select all
@@ -350,7 +350,7 @@ const TableComponent = ({ transactions, onEdit, onDelete }) => {
 								</Button>
 							</AlertDialogTrigger>
 							<AnimatePresence>
-								<AlertDialogContent className="bg-[#1e1e22] !p-2 border-neutral-700 text-white shadow-[0_0_20px_rgba(220,38,38,0.5)]">
+								<AlertDialogContent className="bg-[#01010e] !p-2 border-neutral-700 text-white shadow-[0_0_20px_rgba(0,0,0,0.45)]">
 									<AlertDialogHeader>
 										<AlertDialogTitle className="flex items-center gap-2 text-red-500 font-bold text-2xl"><Skull size={26} className='text-gray-400' /> Are you absolutely sure? <Skull size={26} className='text-gray-400' /></AlertDialogTitle>
 										<AlertDialogDescription asChild>
@@ -399,7 +399,7 @@ const TableComponent = ({ transactions, onEdit, onDelete }) => {
 									<AlertDialogFooter className="flex-row justify-end gap-2">
 										<AlertDialogCancel
 											onClick={closeDeleteConfirm}
-											className="bg-neutral-700 !p-2 border-neutral-600 hover:bg-neutral-600 text-gray-200"
+											className="bg-[#0e0e11] !p-2 border-neutral-600 hover:bg-[#131317] !text-gray-200"
 										>
 											Cancel
 										</AlertDialogCancel>
@@ -423,7 +423,7 @@ const TableComponent = ({ transactions, onEdit, onDelete }) => {
 				<div className="!my-7 max-w-4xl !pt-2 !mx-auto p-4 flex flex-col justify-center md:flex-row gap-6 overflow-hidden">
 
 					{/* --- Total Transactions Card --- */}
-					<div className="flex-1 bg-neutral-800 !p-2 rounded-xl ring-1 ring-white/10 flex items-center gap-6 transform hover:-translate-y-1 transition-transform">
+					<div className="flex-1 bg-[#01010e] !p-2 rounded-xl ring-1 ring-white/10 flex items-center gap-6 transform hover:-translate-y-1 transition-transform">
 						<div className="bg-pink-900/50 p-4 rounded-lg">
 							<ListChecks className="w-8 h-8 text-pink-400" />
 						</div>
@@ -434,7 +434,7 @@ const TableComponent = ({ transactions, onEdit, onDelete }) => {
 					</div>
 
 					{/* --- Total Amount Card --- */}
-					<div className="flex-1 bg-neutral-800 !p-2 rounded-xl ring-1 ring-white/10 flex items-center gap-6 transform hover:-translate-y-1 transition-transform">
+					<div className="flex-1 bg-[#01010e] !p-2 rounded-xl ring-1 ring-white/10 flex items-center gap-6 transform hover:-translate-y-1 transition-transform">
 						<div className="bg-green-900/50 p-4 rounded-lg">
 							<IndianRupee className="w-8 h-8 text-green-400" />
 						</div>

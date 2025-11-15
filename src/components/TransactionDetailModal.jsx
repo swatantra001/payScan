@@ -74,7 +74,7 @@ const TransactionDetailModal = ({ transaction, isOpen, onClose, onEdit, onDelete
     return (
         <Dialog open={isOpen} onOpenChange={onClose}>
             <DialogContent
-                className={`bg-[#1e1e22] ${isAlertOpen ? 'blur-xs' : ''} border-neutral-700 text-white !p-6 rounded-2xl shadow-[0_0_10px_rgba(233,30,99,0.5)] md:max-w-lg max-h-[85vh] overflow-hidden wrap-break-word flex flex-col w-[90vw]`}
+                className={`bg-[#01010e] ${isAlertOpen ? 'blur-md' : ''} border-neutral-700 text-white !p-6 rounded-2xl shadow-[0_0_20px_rgba(0,0,0,0.45)] md:max-w-lg max-h-[85vh] overflow-hidden wrap-break-word flex flex-col w-[90vw]`}
                 // Use motion for animation
                 as={motion.div}
                 initial={{ scale: 0.9, opacity: 0, y: 20 }}
@@ -115,7 +115,7 @@ const TransactionDetailModal = ({ transaction, isOpen, onClose, onEdit, onDelete
                     <Button
                         variant="outline"
                         onClick={handleEditClick}
-                        className="!p-2 cursor-pointer bg-neutral-800 text-white hover:text-[#ff0066] hover:bg-neutral-700"
+                        className="!p-2 cursor-pointer bg-[#0e0e11] text-white hover:text-[#ff0066] hover:bg-[#131317]"
                     >
                         <Edit2Icon size={12} /> Edit
                     </Button>
@@ -132,7 +132,7 @@ const TransactionDetailModal = ({ transaction, isOpen, onClose, onEdit, onDelete
                             </Button>
                         </AlertDialogTrigger>
                         <AnimatePresence>
-                            <AlertDialogContent className="bg-[#1e1e22] !p-2 border-neutral-700 text-white shadow-[0_0_20px_rgba(220,38,38,0.5)]">
+                            <AlertDialogContent className="bg-[#01010e] !p-2 border-neutral-700 text-white shadow-[0_0_20px_rgba(0,0,0,0.45)]">
                                 <AlertDialogHeader>
                                     <AlertDialogTitle className="flex items-center gap-2 text-red-500 font-bold text-2xl"><Skull size={26} className='text-gray-400' /> Are you absolutely sure? <Skull size={26} className='text-gray-400' /></AlertDialogTitle>
                                     <AlertDialogDescription asChild>
@@ -158,7 +158,7 @@ const TransactionDetailModal = ({ transaction, isOpen, onClose, onEdit, onDelete
                                 <AlertDialogFooter className="flex-row justify-end gap-2">
                                     <AlertDialogCancel
                                         onClick={closeDeleteConfirm}
-                                        className="bg-neutral-700 !p-2 border-neutral-600 hover:bg-neutral-600 text-gray-200"
+                                        className="bg-[#0e0e11] !p-2 border-neutral-600 hover:bg-[#131317] !text-gray-200"
                                     >
                                         Cancel
                                     </AlertDialogCancel>

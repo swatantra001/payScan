@@ -32,7 +32,7 @@ const ConfirmationDialog = ({ formData, isOpen, onClose, onConfirmSubmit }) => {
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.9, opacity: 0 }}
                 transition={{ duration: 0.2 }}
-                className="bg-[#1e1e22] border-neutral-700 text-white !p-6 rounded-2xl shadow-[0_0_10px_rgba(233,30,99,0.5)] md:max-w-lg max-h-[85vh] overflow-hidden wrap-break-word flex flex-col w-[90vw]"
+                className="bg-[#01010e] border-neutral-700 text-white !p-6 rounded-2xl shadow-[0_0_20px_rgba(0,0,0,0.45)] md:max-w-lg max-h-[85vh] overflow-hidden wrap-break-word flex flex-col w-[90vw]"
             >
                 <DialogHeader className="mb-4 flex-shrink-0">
                     <DialogTitle className="text-2xl font-bold text-[#ff0066] text-left md:text-center">
@@ -66,7 +66,7 @@ const ConfirmationDialog = ({ formData, isOpen, onClose, onConfirmSubmit }) => {
                     <Button
                         variant="outline"
                         onClick={onClose} // Simply close the dialog
-                        className="!p-2 cursor-pointer bg-neutral-800 text-white hover:text-[#ff0066] hover:bg-neutral-700"
+                        className="!p-2 cursor-pointer bg-[#0e0e11]] text-white hover:text-[#ff0066] hover:bg-[#131317]"
                     >
                        <Edit2Icon size={12}/> Edit
                     </Button>
